@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		697A72B32B05A99200E5AB23 /* SleepCaculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 697A72B22B05A99200E5AB23 /* SleepCaculator.mlmodel */; };
 		69C8B0662B03015D00F301E2 /* Better_RestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C8B0652B03015D00F301E2 /* Better_RestApp.swift */; };
 		69C8B0682B03015D00F301E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C8B0672B03015D00F301E2 /* ContentView.swift */; };
 		69C8B06A2B03015E00F301E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69C8B0692B03015E00F301E2 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		697A72B22B05A99200E5AB23 /* SleepCaculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepCaculator.mlmodel; sourceTree = SOURCE_ROOT; };
 		69C8B0622B03015D00F301E2 /* Better Rest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Better Rest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69C8B0652B03015D00F301E2 /* Better_RestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better_RestApp.swift; sourceTree = "<group>"; };
 		69C8B0672B03015D00F301E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				69C8B0652B03015D00F301E2 /* Better_RestApp.swift */,
 				69C8B0672B03015D00F301E2 /* ContentView.swift */,
 				69C8B08F2B0303DC00F301E2 /* LogicModel.swift */,
+				697A72B22B05A99200E5AB23 /* SleepCaculator.mlmodel */,
 				69C8B0912B059F2D00F301E2 /* PracticeView.swift */,
 				69C8B0692B03015E00F301E2 /* Assets.xcassets */,
 				69C8B06B2B03015E00F301E2 /* Preview Content */,
@@ -266,6 +269,7 @@
 				69C8B0682B03015D00F301E2 /* ContentView.swift in Sources */,
 				69C8B0902B0303DC00F301E2 /* LogicModel.swift in Sources */,
 				69C8B0662B03015D00F301E2 /* Better_RestApp.swift in Sources */,
+				697A72B32B05A99200E5AB23 /* SleepCaculator.mlmodel in Sources */,
 				69C8B0922B059F2D00F301E2 /* PracticeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
