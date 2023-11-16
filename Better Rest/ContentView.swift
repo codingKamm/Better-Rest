@@ -74,13 +74,14 @@ struct ContentView: View {
             }
             .padding()
             .navigationTitle("Better Rest")
-            .toolbar {
-                Button("Caculate", action: caculateBedtime)
-            }
+            
             .alert(alertTitle, isPresented: $showingAlert) {
                 Button("Ok") {}
             } message: {
                 Text(alertMessage)
+            }
+            .toolbar {
+                Button("Caculate", action: caculateBedtime)
             }
         }
 
