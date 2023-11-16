@@ -15,6 +15,7 @@
 		69C8B0812B03015E00F301E2 /* Better_RestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C8B0802B03015E00F301E2 /* Better_RestUITests.swift */; };
 		69C8B0832B03015E00F301E2 /* Better_RestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C8B0822B03015E00F301E2 /* Better_RestUITestsLaunchTests.swift */; };
 		69C8B0902B0303DC00F301E2 /* LogicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C8B08F2B0303DC00F301E2 /* LogicModel.swift */; };
+		69C8B0922B059F2D00F301E2 /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C8B0912B059F2D00F301E2 /* PracticeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		69C8B0802B03015E00F301E2 /* Better_RestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better_RestUITests.swift; sourceTree = "<group>"; };
 		69C8B0822B03015E00F301E2 /* Better_RestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better_RestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		69C8B08F2B0303DC00F301E2 /* LogicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogicModel.swift; sourceTree = "<group>"; };
+		69C8B0912B059F2D00F301E2 /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				69C8B0652B03015D00F301E2 /* Better_RestApp.swift */,
 				69C8B0672B03015D00F301E2 /* ContentView.swift */,
 				69C8B08F2B0303DC00F301E2 /* LogicModel.swift */,
+				69C8B0912B059F2D00F301E2 /* PracticeView.swift */,
 				69C8B0692B03015E00F301E2 /* Assets.xcassets */,
 				69C8B06B2B03015E00F301E2 /* Preview Content */,
 			);
@@ -263,6 +266,7 @@
 				69C8B0682B03015D00F301E2 /* ContentView.swift in Sources */,
 				69C8B0902B0303DC00F301E2 /* LogicModel.swift in Sources */,
 				69C8B0662B03015D00F301E2 /* Better_RestApp.swift in Sources */,
+				69C8B0922B059F2D00F301E2 /* PracticeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
