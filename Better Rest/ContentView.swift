@@ -5,6 +5,7 @@
 //  Created by Cameron Warner on 11/13/23.
 //
 
+import CoreML
 import SwiftUI
 
 struct ContentView: View {
@@ -12,15 +13,30 @@ struct ContentView: View {
     @State private var wakeUp = Date.now
     @State private var coffeeAmount = 1
     
-//    let components = Calendar.current.dateComponents([.hour,.minute], from: someDate)
-//    let hour = components.hour ?? 0
-//    let minute = components.minute ?? 0
-    
-//    components.hour = 8
-//    components.minute = 0
-//    let date = Calendar.current.date(from: components) ?? .now
+    @State private var alertTitle = ""
+    @State private var alertMessage = ""
+    @State private var showingAlert = false
+
     func caculateBedtime() {
-        
+        do {
+            let config = MLModelConfiguration()
+            let model = try SleepCaculator(configuration: config)
+            let components = Calendar.current.dateComponents([.hour, .minute], from: wakeUp)
+            
+            let hour = (components.hour ?? 0) * 60 * 60
+            let minuets = (components.minute ?? 0) * 60
+            
+            let prediction = try model.prediction(wake: Int64(Double(hour + minuets)), estimatedSleep: sleepAmount, coffee: Int64(Double(coffeeAmount)))
+            
+            let sleepTime = wakeUp - prediction.actualSleep
+            alertTitle = "Your ideal bedtime is..."
+            alertMessage = sleepTime.formatted(date: .omitted, time: .shortened)
+            
+        } catch {
+            alertTitle = "Error"
+            alertMessage = "Sorry, there was a problem caculating your bedtime."
+        }
+        showingAlert = true
     }
     
     var body: some View {
@@ -50,6 +66,11 @@ struct ContentView: View {
             .navigationTitle("Better Rest")
             .toolbar {
                 Button("Caculate", action: caculateBedtime)
+            }
+            .alert(alertTitle, isPresented: $showingAlert) {
+                Button("Ok") {}
+            } message: {
+                Text(alertMessage)
             }
         }
 
