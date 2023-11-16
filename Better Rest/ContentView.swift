@@ -10,12 +10,19 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var sleepAmount = 8.0
-    @State private var wakeUp = Date.now
+    @State private var wakeUp = defaultWakeUpTime
     @State private var coffeeAmount = 1
     
     @State private var alertTitle = ""
     @State private var alertMessage = ""
     @State private var showingAlert = false
+    
+    static var defaultWakeUpTime: Date {
+        var components = DateComponents()
+        components.hour = 7
+        components.minute = 0
+        return Calendar.current.date(from: components) ?? .now
+    }
 
     func caculateBedtime() {
         do {
@@ -48,17 +55,20 @@ struct ContentView: View {
                 DatePicker("Pleasse Enter a Time", selection: $wakeUp, displayedComponents: .hourAndMinute)
                     .labelsHidden()
                 Divider()
-                Text("Desired Amount of Sleep")
-                    .font(.headline)
-                    .dynamicTypeSize(.xxxLarge)
-                Stepper("\(sleepAmount.formatted()) hours", value: $sleepAmount, in: 4...12, step: 0.25)
-                Divider()
-                Text("Daily Coffee Intake")
-                    .font(.headline)
-                    .dynamicTypeSize(.xxxLarge)
-                Stepper("\(coffeeAmount) cup(s)", value: $coffeeAmount, in: 1...20)
-                Divider()
-               
+            
+            VStack(alignment: .leading, spacing: 0) {
+                    Text("Desired Amount of Sleep")
+                        .font(.headline)
+                        .dynamicTypeSize(.xLarge)
+                    Stepper("\(sleepAmount.formatted()) hours", value: $sleepAmount, in: 4...12, step: 0.25)
+                    Divider()
+                    
+                    Text("Daily Coffee Intake")
+                        .font(.headline)
+                        .dynamicTypeSize(.xLarge)
+                Stepper("^[\(coffeeAmount) cup](inflect: true)", value: $coffeeAmount, in: 1...20)
+                    Divider()
+                }
                
                 
             }
